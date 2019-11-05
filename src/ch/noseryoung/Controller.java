@@ -37,7 +37,11 @@ public class Controller implements Initializable {
   @FXML
   public void initialize(URL location, ResourceBundle resources) throws JSONException {
 
-    wm = new WeatherModel(cityID);
+    try {
+      wm = new WeatherModel(cityID);
+    } catch (MyException e) {
+      e.printStackTrace();
+    }
     System.out.println(wm.toString());
     cityNameLbl.textProperty().bindBidirectional(wm.cityNameProperty());
     descriptionLbl.textProperty().bindBidirectional(wm.descriptionProperty());

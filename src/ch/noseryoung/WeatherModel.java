@@ -118,17 +118,17 @@ public class WeatherModel {
 
   public WeatherModel() {}
 
-  public WeatherModel(int cityID) throws JSONException {
+  public WeatherModel(int cityID) throws JSONException, MyException {
     this.cityID.set(cityID);
     getWeather();
   }
 
   // gets weather data from OWM
-  public void getWeather() throws JSONException {
+  public void getWeather() throws JSONException, MyException {
     OpenWeatherMap wm =
         new OpenWeatherMap("4c0b1bfca32ed81dbd70ce2bca7cbb9d"); // personal OWM API KEY
-    CurrentWeather cw = wm.currentWeatherByCityCode(cityID.longValue());
 
+    CurrentWeather cw = wm.currentWeatherByCityCode(cityID.longValue());
     this.cityName.set(cw.getCityName());
     this.description.set(cw.getWeatherInstance(0).getWeatherDescription());
     float tempC = (((cw.getMainInstance().getTemperature()) - 32) * 5) / 9;
@@ -138,6 +138,7 @@ public class WeatherModel {
     float kmph = (cw.getWindInstance().getWindSpeed()) * 1.609F;
     this.wind.set(String.format("%.1f", kmph));
     this.iconID.set(cw.getWeatherInstance(0).getWeatherIconName());
+
   }
 
   @Override
