@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="borderpane" stylesheets="@style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ch.noseryoung.Controller">
+   <top>
+      <FlowPane prefHeight="15.0" prefWidth="600.0" styleClass="flowpaneborder" BorderPane.alignment="CENTER" />
+   </top>
+   <bottom>
+      <FlowPane prefHeight="15.0" prefWidth="600.0" styleClass="flowpaneborder" BorderPane.alignment="CENTER" />
+   </bottom>
+   <left>
+      <FlowPane prefHeight="200.0" prefWidth="10.0" styleClass="flowpaneborder" BorderPane.alignment="CENTER" />
+   </left>
+   <right>
+      <FlowPane prefHeight="200.0" prefWidth="10.0" styleClass="flowpaneborder" BorderPane.alignment="CENTER" />
+   </right>
+   <center>
+      <FlowPane alignment="CENTER" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <GridPane prefHeight="307.0" prefWidth="588.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="193.0" minWidth="10.0" prefWidth="55.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="377.0" minWidth="10.0" prefWidth="207.00000000000003" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="324.33333333333337" minWidth="10.0" prefWidth="324.33333333333337" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints maxHeight="103.33334350585938" minHeight="2.6666855812072754" prefHeight="46.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="240.0" minHeight="10.0" prefHeight="133.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="68.0" minHeight="4.0" prefHeight="68.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.rowIndex="2" />
+                  <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <children>
+                        <Label id="description" fx:id="descriptionLbl" stylesheets="@style.css" text="Label">
+                           <VBox.margin>
+                              <Insets left="25.0" />
+                           </VBox.margin></Label>
+                     </children></VBox>
+                  <FlowPane alignment="CENTER_LEFT" prefHeight="167.0" prefWidth="325.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                     <children>
+                        <VBox alignment="CENTER" prefHeight="125.0" prefWidth="170.0" styleClass="vbox">
+                           <children>
+                              <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <Label styleClass="data" text="Temperature:">
+                                       <HBox.margin>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <Label fx:id="temperatureLbl" styleClass="data" text="Label">
+                                       <HBox.margin>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets left="10.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <Label styleClass="data" text="Wind:">
+                                       <HBox.margin>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <Label fx:id="windLbl" styleClass="data" text="Label">
+                                       <HBox.margin>
+                                          <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets left="10.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <Label styleClass="data" text="Pressure:">
+                                       <HBox.margin>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <Label fx:id="pressureLbl" styleClass="data" text="Label">
+                                       <HBox.margin>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets left="10.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <Label styleClass="data" text="Humidity:">
+                                       <HBox.margin>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <Label fx:id="humidityLbl" styleClass="data" text="Label">
+                                       <HBox.margin>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets left="10.0" />
+                                 </VBox.margin>
+                              </HBox>
+                           </children>
+                           <FlowPane.margin>
+                              <Insets left="10.0" />
+                           </FlowPane.margin>
+                        </VBox>
+                     </children>
+                  </FlowPane>
+                  <FlowPane alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="27.0" prefWidth="190.0" styleClass="vbox" stylesheets="@style.css">
+                           <children>
+                              <Label fx:id="timeLbl" alignment="CENTER" prefHeight="16.0" prefWidth="175.0" styleClass="data" text="Label" textAlignment="CENTER">
+                                 <HBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                           <FlowPane.margin>
+                              <Insets left="10.0" />
+                           </FlowPane.margin>
+                        </HBox>
+                     </children>
+                  </FlowPane>
+                  <FlowPane alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="30.0" prefWidth="100.0" styleClass="vbox" stylesheets="@style.css">
+                           <children>
+                              <Label id="heading" fx:id="cityNameLbl" alignment="CENTER" stylesheets="@style.css" text="Label">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <FlowPane.margin>
+                              <Insets left="25.0" />
+                           </FlowPane.margin>
+                        </HBox>
+                     </children>
+                  </FlowPane>
+                  <FlowPane alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <children>
+                        <FlowPane alignment="CENTER" prefHeight="125.0" prefWidth="150.0" styleClass="vbox" stylesheets="@style.css">
+                           <children>
+                              <ImageView fx:id="weatherIconView" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" styleClass="imageview" />
+                           </children>
+                           <FlowPane.margin>
+                              <Insets left="25.0" />
+                           </FlowPane.margin>
+                        </FlowPane>
+                     </children>
+                  </FlowPane>
+               </children>
+            </GridPane>
+         </children>
+      </FlowPane>
+   </center>
+</BorderPane>

@@ -1,0 +1,30 @@
+.borderpane{
+    -fx-background-color: lightgrey;
+}
+
+.flowpaneborder{
+    -fx-background-color: #828282;
+}
+
+.text {
+    -fx-font-family: "Roboto Light";
+    -fx-font-weight: bold;
+}
+
+#heading{
+    -fx-font-size: 24;
+    -fx-text-fill: #e6e6e6;
+}
+
+.vbox{
+    -fx-background-color: #828282;
+    -fx-background-radius: 7.5;
+}
+
+.data{
+    -fx-text-fill: #e6e6e6;
+}
+
+#description{
+    -fx-font-style: italic;
+}
